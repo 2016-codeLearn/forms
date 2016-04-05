@@ -10,15 +10,16 @@
 
 	<body>
 
-	<form action="register.php" method="get">
+	<form action="register.php" method="get"> <!-- how the data gets there ( get or post) post is for paswords -->
+
 		<div>
 			<label for="full-name">Full Name</label>
-			<input type="text" id="full-name">
+			<input type="text" id="full-name" required placeholder="Ben Abbot">   <!-- this is the value with its type -->
 			</div>
 
 			<div>
-				<label for="email">E-mail</label>
-				<input type="email" id="email">
+				<label for="website">E-mail</label> <!-- looks for an id -->
+				<input type="url" id="website" required value="http//"> <!-- this is a bullying attribute -->
 			</div>
 
 			<div>
@@ -26,7 +27,69 @@
 				<input type="tel" id="phone">
 			</div>
 
+			<div>
+				<label for="quantity">Your website</label>
+				<input type="number" id="quantity" min="1" max="500">
+			</div>
 
+
+			<div>
+				<label for="date">Chect-in</label>
+				<input type="date" id="date">
+			</div>
+
+			<div>
+				<label for="country">Your Country</label>
+				<select name="country" id="country"> n  <!-- name attribute will be sent to the server -->
+
+					<option value="nz">Please select...</option> 
+						<optgroup label="Oceania">
+							<option value="nz">New Zealand</option> <!-- (eg: from New Zealand, = NZ/ Australia = aus) -->
+							<option value="aus">Australia</option> 
+						</optgroup>
+						 <optgroup label="Other">
+							<option value="usa">United States of America</option> 
+					 	</optgroup>
+				</select>
+			</div>
+
+			<div>
+				<input type="radio" id="male" name="gender">
+				<label for="male">Male</label>
+				</div>
+
+			<div>
+				<input type="radio" id="female" name="gender">
+				<label for="female">Female</label>
+			</div>
+
+			<div>
+				<input type="radio" id="Other" name="gender">
+				<label for="Other">Other</label>
+			</div>
+
+			<!-- CHECKBOXES -->
+			<div>
+				<input type="checkbox" id="remember" checked> <!-- BULLYING ATTRIBUTE. Forces login address -->
+				<label for="remember">Remember login</label>
+			</div>
+
+			<div>
+				<label for="post">Blog post</label>
+				<textarea name="post" id="post" cols="30" rows="10"></textarea>
+			</div>
+
+			<div>
+				<label for="search">Search</label>
+				<input type="search" id="searh">
+			</div>
+
+			<div>
+				<progress max="100" value="70"></progress>
+
+
+			</div>
+			<input type="submit">
 
 	</form>
 
